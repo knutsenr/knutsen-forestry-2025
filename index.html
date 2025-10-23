@@ -3,30 +3,32 @@
 
 <head>
     <title>forestry foundations home</title>
+    <!-- Link to style.css doc -->
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <!-- //  INTRO  // -->
-    <header>
-        <!-- Start content edits below this line. -->
-        <nav>
-            <a href="index.html">𖣂 Home</a>
-            <a href="articles.html#articles">Articles</a>
-            <a href="nowhere">Your Files</a>
-            <search class="headsearch">
+    <!-- //  HEADER  // -->
+    <header class="index-header">
+        <!-- Navigation Bar -->
+        <nav class="nav-header">
+            <!-- Link to Home page index.html -->
+            <a class="grid-item" href="index.html">𖣂 Home</a>
+            <!-- Link to file w/ articles and example article pages. Specifically to the #articles section, not showing the examples -->
+            <a class="grid-item" href="articles.html#articles">Articles</a>
+            <!-- Will open files and save dropdown, currently does nothing -->
+            <a class="grid-item" href="nowhere">Your Files</a>
+            <!-- search function does not currently do anything -->
+            <search class="grid-item" id="searchbar">
                 <form action="./search/">
                     <label for="all">Search a keyword:</label>
                     <input type="text">
                     <button>Search</button>
                 </form>
-                <!--  Your Files Button -->
             </search>
         </nav>
         <h1>Forestry Foundations</h1>
         <h2>Home Page</h2>
-
-        <!-- End content edits here. -->
     </header>
 
     <!-- //  // -->
@@ -64,13 +66,12 @@
         </div>
     </main>
 
-    <!-- //  FOOTER INFO, SOCIAL MEDIA  // -->
+    <!-- //  FOOTER  // -->
     <footer>
-        <!-- Start content edits below this line. -->
-        <p>© 2025 by Rowan Knutsen | <a href="knutsenrowan@gmail.com">knutsenrowan@gmail.com</a> | <a
-                href="rak9808@nyu.edu">rak9808@nyu.edu</a></p>
-        </ul>
-        <!-- End content edits here. -->
+        <!-- Name + Email -->
+        <p>© 2025 by Rowan Knutsen | <a href="mailto:knutsenrowan@gmail.com">knutsenrowan@gmail.com</a> | <a
+                href="mailto:rak9808@nyu.edu">rak9808@nyu.edu</a>
+        </p>
     </footer>
 </body>
 

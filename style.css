@@ -1,14 +1,14 @@
 /* BODY */
 body {
     color: black;
-    background-color: darkseagreen;
+    background-color: ivory;
 }
 
 /* links */
 a {
-    color: green;
+    color: black;
     padding: 2px;
-    background-color: beige;
+    background-color: darkseagreen;
 }
 
 button {
@@ -22,10 +22,7 @@ a:hover {
     /*removes default underline*/
 }
 
-.headsearch {
-    display: inline;
-}
-
+/* sections only show article + example article pages when the requisite links are pressed */
 section:target::before {
     display: block;
 }
@@ -34,16 +31,47 @@ section:target {
     display: none;
 }
 
+.index-header {
+    background-color: darkseagreen;
+}
+
+.nav-header {
+    padding: 10px;
+    background-color: seagreen;
+}
+
+.grid-parent {
+    display: grid;
+    background-color: ivory;
+    height: 10%;
+    width: 85%;
+    gap: 5px;
+    text-align: center;
+    justify-content: space-evenly;
+}
+
+.grid-item {
+    background-color: darkseagreen;
+    height: 2%;
+    padding: 2px;
+    display: inline-block;
+}
+
+#searchbar {
+    width: fit-content;
+}
 
 .flex-container {
-    background: ivory;
+    background: darkseagreen;
     justify-content: space-evenly;
     padding: 10px;
     border: 10px;
     flex-wrap: wrap;
     display: flex;
-    height: 200px;
+    height: 20%;
     width: 85%;
+    border: 20px;
+    border-color: seagreen;
 }
 
 .flex-item {
@@ -53,6 +81,8 @@ section:target {
     background-color: seagreen;
     flex: 1 1 1 1px;
     box-sizing: border-box;
+    border: 10px;
+    border-color: black;
 }
 
 .example-art {

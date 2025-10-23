@@ -8,23 +8,33 @@
 
 <body>
     <!-- //  INTRO  // -->
-    <header>
-        <!-- Start content edits below this line. -->
-        <nav>
+    <header class="index-header">
+        <!-- navigation bar -->
+        <nav class="nav-header">
+            <div class="grid-parent"></div>
+            <!-- Link to Home page index.html -->
             <a href="index.html">𖣂 Home</a>
-            <a href="#articles">Articles</a>
+            <!-- Link to file w/ articles and example article pages. Specifically to the #articles section, not showing the examples -->
+            <a href="articles.html#articles">Articles</a>
+            <!-- Will open files and save dropdown, currently does nothing -->
             <a href="nowhere">Your Files</a>
-        </nav>
-
-        <!-- End content edits here. -->
+            <!-- search function does not currently do anything -->
+            <search class="headsearch">
+                <form action="./search/">
+                    <label for="all">Search a keyword:</label>
+                    <input type="text">
+                    <button>Search</button>
+                </form>
+            </search>
+            </div>
     </header>
 
     <!-- //  // -->
     <main>
+        <!-- specific content to all articles page -->
         <section id="ex-article">
             <h1>Articles</h1>
             <h2>All Articles</h2>
-            <!-- specific content to example article page -->
             <div class="article-title">
                 <a class="title-link" href="#ex-article">Example Article Title</a> By Rowan Knutsen
                 <div class="article-description">Placeholder description text. I pulled up the NYU library site then
@@ -57,10 +67,10 @@
                 </div>
 
         </section>
+        <!-- specific content to example article page -->
         <section id="articles">
             <h1>Example Article Title</h1>
             <h2>Author Lastname, Author2 Lastname2, Author3, Lastname3</h2>
-            <!-- specific content to example article page -->
             <article class="example-art">
                 <h3>Example Article Title</h3>
                 <h4>Authors! Long list of authors.</h4>
@@ -70,6 +80,7 @@
                 <p>Help Help I'm Trapped In The Computer</p>
                 <p>No I'm not, but I am having a headache of a time getting the section stuff to work. I could just do
                     these in different docs but now I'm determined to figure it out.</p>
+                <p>I figured it out!</p>
                 <p>Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia
                     integer nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent per
                     conubia nostra inceptos himenaeos.</p>
@@ -90,11 +101,10 @@
 
     <!-- //  FOOTER  // -->
     <footer>
-        <!-- Start content edits below this line. -->
-        <p>© 2025 by Rowan Knutsen | <a href="knutsenrowan@gmail.com">knutsenrowan@gmail.com</a> | <a
-                href="rak9808@nyu.edu">rak9808@nyu.edu</a></p>
-        </ul>
-        <!-- End content edits here. -->
+        <!-- Name + Email -->
+        <p>© 2025 by Rowan Knutsen | <a href="mailto:knutsenrowan@gmail.com">knutsenrowan@gmail.com</a> | <a
+                href="mailto:rak9808@nyu.edu">rak9808@nyu.edu</a>
+        </p>
     </footer>
 </body>
 
