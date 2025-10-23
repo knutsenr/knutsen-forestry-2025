@@ -1,0 +1,65 @@
+/* BODY */
+body {
+    color: black;
+    background-color: darkseagreen;
+}
+
+/* links */
+a {
+    color: green;
+    padding: 2px;
+    background-color: beige;
+}
+
+button {
+    background-color: seagreen;
+}
+
+/* links when hover */
+a:hover {
+    color: rgb(0, 51, 0);
+    background-color: #ffffff00;
+    /*removes default underline*/
+}
+
+.headsearch {
+    display: inline;
+}
+
+section:target::before {
+    display: block;
+}
+
+section:target {
+    display: none;
+}
+
+
+.flex-container {
+    background: ivory;
+    justify-content: space-evenly;
+    padding: 10px;
+    border: 10px;
+    flex-wrap: wrap;
+    display: flex;
+    height: 200px;
+    width: 85%;
+}
+
+.flex-item {
+    height: 175px;
+    padding: 5px;
+    width: 200px;
+    background-color: seagreen;
+    flex: 1 1 1 1px;
+    box-sizing: border-box;
+}
+
+.example-art {
+    padding: 10%;
+    width: 80%;
+}
+
+.description {
+    width: 85%;
+}
