@@ -1,7 +1,14 @@
 /* BODY */
 body {
     color: black;
-    background-color: ivory;
+    background-image: url("");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    padding-left: 5%;
+}
+
+h4 {
+    color: black;
 }
 
 /* links */
@@ -9,6 +16,7 @@ a {
     color: black;
     padding: 2px;
     background-color: darkseagreen;
+    border-radius: 3px 10px 3px;
 }
 
 button {
@@ -19,7 +27,7 @@ button {
 a:hover {
     color: rgb(0, 51, 0);
     background-color: #ffffff00;
-    /*removes default underline*/
+    color: ivory;
 }
 
 /* sections only show article + example article pages when the requisite links are pressed */
@@ -29,6 +37,12 @@ section:target::before {
 
 section:target {
     display: none;
+}
+
+#articles {
+    background-color: whitesmoke;
+    padding: 20px;
+    width: 80%;
 }
 
 .index-header {
@@ -42,23 +56,19 @@ section:target {
     background-color: seagreen;
     border-radius: 10px;
     display: grid;
-    height: 10%;
-    gap: 5px;
+    height: 5%;
     text-align: center;
-    justify-content: space-evenly;
+    row-gap: 10px;
     grid-template-columns: 1fr 1fr 1fr 4fr;
 }
 
-.grid-item {
+.nav-item {
     background-color: darkseagreen;
     border-radius: 2px 15px 2px;
-    padding: 15px;
+    row-gap: 10%;
+    padding: 10px;
     text-align: center;
     display: inline-block;
-}
-
-#searchbar {
-    width: fit-content;
 }
 
 .flex-container {
@@ -82,16 +92,27 @@ section:target {
     border-color: black;
     text-align: center;
     border-radius: 5px 30px 5px;
-    background-color: seagreen;
+    background-color: #2e8b57;
     flex: 1 1 1 1px;
     box-sizing: border-box;
 }
 
-.example-art {
-    padding: 10%;
-    width: 80%;
+.article-title {
+    padding: 3px;
+    background-color: #2e8b5790;
+    width: 86%;
+    border-radius: 10px;
+    padding: 10px;
+
 }
 
 .description {
     width: 85%;
+}
+
+.footer {
+    background-color: #2e8b57;
+    padding: 10px;
+    width: 86%;
+    border-radius: 10px;
 }

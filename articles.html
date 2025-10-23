@@ -11,22 +11,20 @@
     <header class="index-header">
         <!-- navigation bar -->
         <nav class="nav-header">
-            <div class="grid-parent"></div>
             <!-- Link to Home page index.html -->
-            <a href="index.html">𖣂 Home</a>
+            <a class="nav-item" href="index.html">𖣂 Home</a>
             <!-- Link to file w/ articles and example article pages. Specifically to the #articles section, not showing the examples -->
-            <a href="articles.html#articles">Articles</a>
+            <a class="nav-item" href="articles.html#articles">Articles</a>
             <!-- Will open files and save dropdown, currently does nothing -->
-            <a href="nowhere">Your Files</a>
+            <a class="nav-item" href="nowhere">Your Files</a>
             <!-- search function does not currently do anything -->
-            <search class="headsearch">
+            <search class="nav-item">
                 <form action="./search/">
                     <label for="all">Search a keyword:</label>
                     <input type="text">
                     <button>Search</button>
                 </form>
             </search>
-            </div>
     </header>
 
     <!-- //  // -->
@@ -36,7 +34,9 @@
             <h1>Articles</h1>
             <h2>All Articles</h2>
             <div class="article-title">
-                <a class="title-link" href="#ex-article">Example Article Title</a> By Rowan Knutsen
+                <h4>
+                    <a class="title-link" href="#ex-article">Example Article Title</a> By Rowan Knutsen
+                </h4>
                 <div class="article-description">Placeholder description text. I pulled up the NYU library site then
                     pulled up the inspector to see if i could get any inspo from their HTML but while
                     it seemed relatively simple theyre doing flex math i sure dont think ill be understanding anytime
@@ -49,7 +49,9 @@
             </div>
             <p></p>
             <div class="article-title">
-                <a class="title-link" href="#ex-article">Definitely A Different Article</a> By Rowan Knutsen
+                <h4>
+                    <a class="title-link" href="#ex-article">Definitely A Different Article</a> By Rowan Knutsen
+                </h4>
                 <div class="article-description">Ideally this will be a list of differnt articles but that's not what
                     I'm worried about right now.</div>
             </div>
@@ -58,8 +60,10 @@
 
                 </p>
                 <div class="article-title">
-                    <a class="title-link" href="#ex-article">Uh Oh the Articles are Multiplying</a> By Rowan
-                    Knutsen
+                    <h4>
+                        <a class="title-link" href="#ex-article">Uh Oh the Articles are Multiplying</a> By Rowan
+                        Knutsen
+                    </h4>
                     <div class="article-description">Ideally this will be a list of differnt articles but that's not
                         what
                         I'm worried about right now.
@@ -101,9 +105,11 @@
 
     <!-- //  FOOTER  // -->
     <footer>
+        <p>
+        </p>
         <!-- Name + Email -->
-        <p>© 2025 by Rowan Knutsen | <a href="mailto:knutsenrowan@gmail.com">knutsenrowan@gmail.com</a> | <a
-                href="mailto:rak9808@nyu.edu">rak9808@nyu.edu</a>
+        <p class="footer">© 2025 by Rowan Knutsen | <a href="mailto:knutsenrowan@gmail.com">knutsenrowan@gmail.com</a> |
+            <a href="mailto:rak9808@nyu.edu">rak9808@nyu.edu</a>
         </p>
     </footer>
 </body>
