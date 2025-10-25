@@ -16,8 +16,14 @@ body {
     padding: 10px;
 }
 
+h1 {
+    color: black;
+    margin: 3;
+}
+
 h4 {
     color: white;
+    margin: 1;
 }
 
 /* links */
@@ -28,15 +34,15 @@ a {
     border-radius: 3px 10px 3px;
 }
 
-button {
-    background-color: seagreen;
-}
-
 /* links when hover */
 a:hover {
     color: rgb(0, 51, 0);
     background-color: #ffffff00;
     color: ivory;
+}
+
+button {
+    background-color: seagreen;
 }
 
 /* sections only show article + example article pages when the requisite links are pressed */
@@ -52,6 +58,15 @@ section:target {
     background-color: whitesmoke;
     padding: 20px;
     width: 80%;
+    color: darkslategrey;
+}
+
+#ex-article {
+    color: white;
+}
+
+#art-gallery {
+    display: grid;
 
 }
 
@@ -115,7 +130,29 @@ section:target {
     background-color: #2e8b5790;
     border-radius: 10px;
     padding: 10px;
+}
 
+#art-gallery {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 10px;
+}
+
+.article-list {
+    border: 1px solid black;
+    padding: 10px;
+    background-color: #2e8b5780;
+    border-radius: 10px;
+}
+
+.article-list p {
+    color: #fff;
+}
+
+.article-list h4 {
+    color: white;
+    margin: 0;
+    display: inline;
 }
 
 .footer {
@@ -125,3 +162,9 @@ section:target {
     position: sticky;
     bottom: 0;
 }
+
+
+
+/* @media (max-width: 800px) {
+    tree-gallery {}
+} */
