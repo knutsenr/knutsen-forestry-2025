@@ -2,7 +2,7 @@
 Rowan Knutsen 2025.
 Github for my project in the 2025 introduction to web development for learning designers. 
 
-### Newly Added
+## Newly Added
 - Both emails at the bottom of the page should open the email app with mailto: in their links.
 - Added background image
 - All links to Article, Home, and Example Article pages are working
@@ -10,11 +10,14 @@ Github for my project in the 2025 introduction to web development for learning d
 - Created JS script which will create article listings from an array rather than doing each manually
 - Nav bar sticks to top of screen
 
-### Pages and Navigation
-## Files
-**index.html** contains the home page
-**articles.html** contains all articles + example article page
-**style.css** contains all css for project
+## Pages and Navigation
+### Files
+**index.html** contains the home page.
+
+**articles.html** contains all articles + example article page.
+
+**style.css** contains all css for project.
+
 **script.js** contians all javascript for project. articleList.js is currently not interacting with the program so the article array is housed in script.js.
 
 ## Navigation
