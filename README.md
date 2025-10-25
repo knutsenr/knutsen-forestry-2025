@@ -8,6 +8,7 @@ Github for my project in the 2025 introduction to web development for learning d
 - All links to Article, Home, and Example Article pages are working
 - Cleaned up CSS Visuals
 - Created JS script which will create article listings from an array rather than doing each manually
+- Nav bar sticks to top of screen
 
 ### Pages and Navigation
 ## Files
