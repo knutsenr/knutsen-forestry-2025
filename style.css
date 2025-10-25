@@ -1,7 +1,7 @@
 /* BODY */
 body {
-    background-image: url(" C:\Users\batin\local-git\rowan-knutsen-nyu-coding-forestry\pexels-shottrotter-1150745.jpg");
-    color: black;
+    background-image: url("/pexels-shottrotter-1150745.jpg");
+    color: ivory;
     padding: 0% 5%;
     background-size: cover;
     background-repeat: no-repeat;
@@ -9,8 +9,15 @@ body {
     background-position: center;
 }
 
+.description {
+    background-color: #2e8b5780;
+    color: white;
+    border-radius: 10px;
+    padding: 10px;
+}
+
 h4 {
-    color: black;
+    color: white;
 }
 
 /* links */
@@ -49,8 +56,9 @@ section:target {
 }
 
 .index-header {
-    background-color: darkseagreen;
-    border-radius: 20px;
+    background-color: #8fbc8f80;
+    border-radius: 10px;
+    padding: 10px;
 }
 
 .nav-header {
@@ -62,6 +70,8 @@ section:target {
     text-align: center;
     row-gap: 10px;
     grid-template-columns: 1fr 1fr 1fr 4fr;
+    top: 0;
+    position: sticky;
 }
 
 .nav-item {
@@ -74,14 +84,13 @@ section:target {
 }
 
 .flex-container {
-    background: darkseagreen;
+    background: #8fbc8f70;
     justify-content: space-evenly;
     padding: 10px;
     border: 10px;
     flex-wrap: wrap;
     display: flex;
     height: 20%;
-    border: 20px;
     border-radius: 20px;
     border-color: seagreen;
 }
@@ -90,12 +99,15 @@ section:target {
     height: 175px;
     padding: 10px;
     width: 200px;
-    border-color: black;
     text-align: center;
     border-radius: 5px 30px 5px;
-    background-color: #2e8b57;
+    background-color: #1f6d41;
     flex: 1 1 1 1px;
     box-sizing: border-box;
+}
+
+.flex-item-1 {
+    width: 90%;
 }
 
 .article-title {
@@ -110,4 +122,6 @@ section:target {
     background-color: #2e8b57;
     padding: 10px;
     border-radius: 10px;
+    position: sticky;
+    bottom: 0;
 }
