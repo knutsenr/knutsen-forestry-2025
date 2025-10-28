@@ -17,7 +17,7 @@ const artInfo = [
         title: "Downloading OpenStreetMap data using QGIS",
         author: "NYU DataServices",
         link: "articles.html#single",
-        description: "A written guide on how to download the OpenStreetMap basemap in open-source GIS software GIS",
+        description: "A written guide on how to download the OpenStreetMap basemap in open-source GIS software QGIS",
         pdf: "\\pdf_docs\\Downloading OpenStreetMap data using QGIS.pdf"
     },
     {
@@ -38,14 +38,14 @@ const artInfo = [
         title: "How to Edit Attribute Tables in QGIS",
         author: "NYU DataServices",
         link: "articles.html#single",
-        description: "A written guide on how to edit an attribute file in open-source GIS software GIS.",
+        description: "A written guide on how to edit an attribute file in open-source GIS software QGIS.",
         pdf: "\\pdf_docs\\How to Edit Attribute Tables in QGIS.pdf"
     },
     {
         title: "Merging Shapefiles in QGIS",
         author: "NYU DataServices",
         link: "articles.html#single",
-        description: "A written guide on how to merge shapefiles in open-source GIS software GIS.",
+        description: "A written guide on how to merge shapefiles in open-source GIS software QGIS.",
         pdf: "\\pdf_docs\\Merging Shapefiles in QGIS.pdf"
     }
 ];
