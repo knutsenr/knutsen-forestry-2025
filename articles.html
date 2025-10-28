@@ -3,7 +3,7 @@
 
 <head>
     <link rel="stylesheet" href="style.css">
-    <script scr="C:\Users\batin\knutsenr-directories\knutsen-forestry-2025\js\articleList.js"></script>
+    <script scr="js/articleList.js" defer></script>
     <script src="js/script.js" defer></script>
     <title>Forestry Foundation Articles</title>
 </head>
@@ -16,7 +16,7 @@
             <!-- Link to Home page index.html -->
             <a class="nav-item" href="index.html">𖣂 Home</a>
             <!-- Link to file w/ articles and example article pages. Specifically to the #articles section, not showing the examples -->
-            <a class="nav-item" href="articles.html#articles">Articles</a>
+            <a class="nav-item" href="articles.html#all-articles">Articles</a>
             <!-- Will open files and save dropdown, currently does nothing -->
             <a class="nav-item" href="nowhere">Your Files</a>
             <!-- search function does not currently do anything -->
@@ -34,20 +34,29 @@
     <!-- //  // -->
     <main>
         <!-- specific content to all articles page -->
-        <section id="ex-article">
+
+        <p></p>
+        <section id="single">
             <h2>All Articles</h2>
-
             <p></p>
-
             <div id="art-gallery"></div>
-
         </section>
+
+        <section id="all-articles">
+            <p></p>
+            <!-- <object data="\pdf_docs\Clipping Shapefiles in QGIS.pdf#toolbar=0&navpanes=0" type="application/pdf"
+            scrolling="auto@" height="800px" width="100%"></object> -->
+            <article id="single-article"></article>
+        </section>
+
         <!-- specific content to example article page -->
-        <section id="articles">
+        <!-- <section>
             <h1>Example Article Title</h1>
             <h2>Author Lastname, Author2 Lastname2, Author3, Lastname3</h2>
-            <article class="example-art">
-                <h3>Example Article Title</h3>
+
+            <iframe data="/article_pdf/Buffering Shapefiles in QGIS.pdf" type="application/pdf" scrolling="auto@"
+                height="100%f" width="100%"></iframe>
+             <h3>Example Article Title</h3>
                 <h4>Authors! Long list of authors.</h4>
 
                 <p>How do classes work.</p>
@@ -67,9 +76,8 @@
                     integer nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent per
                     conubia nostra inceptos himenaeos.
 
-                </p>
-            </article>
-        </section>
+                </p> 
+        </section> -->
 
 
     </main>

@@ -7,8 +7,11 @@ Github for my project in the 2025 introduction to web development for learning d
 - Added background image
 - All links to Article, Home, and Example Article pages are working
 - Cleaned up CSS Visuals
-- Created JS script which will create article listings from an array rather than doing each manually
 - Nav bar sticks to top of screen
+- Created JS script which will create article listings from an array rather than doing each manually
+- Created HTML container which will display each of these articles on the articles page of the site 
+- Created extra file for articles.js and article-pdf.html to sparate pages then deleted them when I could not get the js to reference different html files in the same js file.
+- Articles page is currently a grid of different article titles made with Javascript in script.js. This works. I am working on getting the PDFs to display in the page when the link is pressed.
 
 ## Pages and Navigation
 ### Files
