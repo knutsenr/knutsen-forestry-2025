@@ -1,3 +1,4 @@
+// array of article attributes
 const artInfo = [
     {
         title: "Buffering Shapefiles in QGIS",
@@ -50,6 +51,11 @@ const artInfo = [
     }
 ];
 
+// find relevant ids in articles.html
+const gallery = document.getElementById('art-gallery');
+const single = document.getElementById('single-article');
+
+// when article link is clicked read in article infor for pdf and add styling 
 const current_id = "x";
 addEventListener("click", function (e) {
     const result = artInfo.find(({ title }) => title === event.target.id);
@@ -62,15 +68,12 @@ addEventListener("click", function (e) {
     singlePDF.width = "100%";
 
     single.appendChild(singlePDF);
+    // singlePDF.remove();
     // console.log(event.target.id);
 });
 
-const gallery = document.getElementById('art-gallery');
-const single = document.getElementById('single-article');
-
+// read array into 'art cards' to be displayed as article list
 artInfo.forEach(createArtCard);
-
-
 function createArtCard(art) {
     const artDiv = document.createElement('div');
     // This class could be used in CSS to style each tree’s card uniformly.
@@ -93,26 +96,28 @@ function createArtCard(art) {
     gallery.appendChild(artDiv);
 };
 
+// goal = make article desc appear on hover.
 
+/*
 const gal = document.getElementById('single-article');
 
+artInfo.forEach(createArticle);
+console.log(document.URL);
 
-// artInfo.forEach(createArticle);
-// console.log(document.URL);
+function createArticle(x) {
+    console.log("got to createArticle");
+    const singleDiv = document.createElement('div');
+    singleDiv.className = 'select-art';
 
-// function createArticle(x) {
-//     console.log("got to createArticle");
-//     const singleDiv = document.createElement('div');
-//     singleDiv.className = 'select-art';
+    const artTitle = document.createElement('h1');
+    artTitle.textContent = x.title;
+    singleDiv.appendChild(artTitle);
+    // artDiv.appendChild(artTitle);
 
-//     const artTitle = document.createElement('h1');
-//     artTitle.textContent = x.title;
-//     singleDiv.appendChild(artTitle);
-//     // artDiv.appendChild(artTitle);
+    const artAuth = document.createElement('h4');
+    artAuth.textContent = " by " + x.author;
+    singleDiv.appendChild(artAuth);
 
-//     const artAuth = document.createElement('h4');
-//     artAuth.textContent = " by " + x.author;
-//     singleDiv.appendChild(artAuth);
-
-//     gal.appendChild(singleDiv);
-// };
+    gal.appendChild(singleDiv);
+};
+*/

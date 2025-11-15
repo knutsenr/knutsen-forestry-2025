@@ -123,10 +123,26 @@ section:target {
     gap: 10px;
 }
 
+/* ARTICLES LINK PAGE */
 .article-list {
     padding: 10px;
     background-color: #2e8b5780;
     border-radius: 10px;
+}
+
+/* when hovering over an article entry - dissplay description */
+.article-list:hover+.article-list p {
+    display: block;
+}
+
+.article-list h4 {
+    color: white;
+    margin: 0;
+    display: inline;
+}
+
+.article-list p {
+    display: none;
 }
 
 #single-article {
@@ -138,15 +154,10 @@ section:target {
 
 .select-art {
     color: white;
-    background-color: pink;
+    background-color: yellow;
 }
 
-.article-list h4 {
-    color: white;
-    margin: 0;
-    display: inline;
-}
-
+/* FOOTER */
 .footer {
     background-color: #2e8b57;
     padding: 10px;

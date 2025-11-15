@@ -3,10 +3,10 @@ Rowan Knutsen 2025.
 Github container for my project in the 2025 introduction to web development for learning designers course. 
 
 ## This Commit
-- **Modified |** script.js file. Currently uses js to create a grid of articles, authors, and descriptions. When a link is selected, the page opens another section and js selects the PDF link of the relevant article and embeds it as a PDF in the page.
-- **Issues |** the way that I found to open the relevant PDF works. It also slows down the site and I imagine this is a bad way to do what I am doing, sometimes only the first article you select will open properly and then every other link will open to that same PDF. Searching for alternatives.
-- **Note |** Because of the PDFs I am using and the ways I found to embed PDF without downloading extra material, it contains the bar to edit or download in browser. This defeats the purpose of some of my intended 'Your Files' function. I am sorting out how to open the articles a different way.
-- **NEXT |** I plan to make the search function select articles by Keyword.
+- **Modified |** Added animations - updated link hovers. Articles in article list now only show description on hover. 
+- **Issues |** Still having PDF issues. The ways that it occurs to me to use remove() have not been doing exactly what I wanted so the current state is reverted to what it was before. For some reason hovering over an article reveals the description for the listing below it, not the one hovered. 
+- **Note |** Sorry I submitted this week's work without realizing I either forgot to push or the push had not gone through! My bad.
+- **NEXT |** Find way to remove() articles. Make search function work. 
 
 ## Last Commits
 - Added relevant PDF folder. Fixed some links.
@@ -38,3 +38,5 @@ The Articles page lists a series of articles selected from a javascript list. Al
 Next:
 - Functional search bar
 - Your Files drop down
+- Speed up PDFs 
+- make listenerevent only go off for links
