@@ -16,16 +16,26 @@
             <!-- Link to Home page index.html -->
             <a class="nav-item" href="index.html">𖣂 Home</a>
             <!-- Link to file w/ articles and example article pages. Specifically to the #articles section, not showing the examples -->
-            <a class="nav-item" href="articles.html#all-articles">Articles</a>
+            <a class="nav-item" href="articles.html">Articles</a>
             <!-- Will open files and save dropdown, currently does nothing -->
-            <a class="nav-item" href="nowhere">Your Files</a>
+            <a class="nav-item" href="#">Your Files</a>
             <!-- search function does not currently do anything -->
             <search class="nav-item">
-                <form action="./search/">
-                    <label for="all">Search a keyword:</label>
-                    <input type="text">
-                    <button>Search</button>
-                </form>
+                <!-- <form action="#" target="_self"> -->
+                <label for="all">Search by Title:</label>
+                <input id="searchTitle" type="text" list="titles" placeholder="Any Title">
+                <datalist id="titles">
+                    <option value="">Buffering Shapefiles in QGIS</option>
+                    <option value="Clipping Shapefiles in QGIS"></option>
+                    <option value="FM-1 An Introduction to Forest Management Plans"></option>
+                    <option value="Forest Farmers Handbook 2023."></option>
+                    <option value="Merging Shapefiles in QGIS"></option>
+                    <option value="How to Edit Attribute Tables in QGIS"></option>
+                </datalist>
+                <!-- <label id="searchAuthor" for="author">Search by author:</label>
+                    <input type="text" id="searchAuthor" placeholder="Author Name"> -->
+                <button value="Submit" id="submitButton" onclick="searchTitle()">Submit</button>
+                <!-- </form> -->
             </search>
         </nav>
         <h1>Articles</h1>
@@ -34,22 +44,26 @@
     <!-- //  // -->
     <main>
         <!-- specific content to all articles page -->
-
         <p></p>
-        <section id="single">
+        <section id="page-show-all">
             <h2>All Articles</h2>
             <p></p>
             <div id="art-gallery"></div>
         </section>
 
-        <section id="all-articles">
+        <section id="page-show-searched">
+            <p>pisser</p>
+            <div id="searched-gallery"></div>
+        </section>
+
+        <section id="page-show-single">
             <p></p>
             <!-- <object data="\pdf_docs\Clipping Shapefiles in QGIS.pdf#toolbar=0&navpanes=0" type="application/pdf"
                 scrolling="auto@" height="800px" width="100%"></object> -->
             <article id="single-article"></article>
         </section>
 
-        <!-- specific content to example article page -->
+        <!-- specific content to example article page avant -> javascript -->
         <!-- <section>
             <h1>Example Article Title</h1>
             <h2>Author Lastname, Author2 Lastname2, Author3, Lastname3</h2>

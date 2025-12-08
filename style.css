@@ -41,20 +41,20 @@ a:hover {
     color: ivory;
 }
 
-button {
+#submitButton {
     background-color: seagreen;
 }
 
-/* sections only show article + example article pages when the requisite links are pressed */
-section:target::before {
+/* sections only show article + example article pages when the requisite links are pressed. no i dont apparently understand how this is working but it _is_ working. . . */
+/* section:target::before {
     display: block;
 }
 
 section:target {
     display: none;
-}
+} */
 
-
+/* PAGE HEADER CSS */
 .index-header {
     background-color: #8fbc8f80;
     border-radius: 10px;
@@ -83,6 +83,8 @@ section:target {
     display: inline-block;
 }
 
+
+/* ARTICLE LIST CSS */
 .flex-container {
     background: #8fbc8f70;
     justify-content: space-evenly;
@@ -123,14 +125,23 @@ section:target {
     gap: 10px;
 }
 
-/* ARTICLES LINK PAGE */
+#searched-gallery {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 10px;
+}
+
 .article-list {
     padding: 10px;
     background-color: #2e8b5780;
     border-radius: 10px;
 }
 
-/* when hovering over an article entry - dissplay description */
+.article-list p {
+    display: none;
+}
+
+/* when hovering over an article entry - display description */
 .article-list:hover+.article-list p {
     display: block;
 }
@@ -141,10 +152,7 @@ section:target {
     display: inline;
 }
 
-.article-list p {
-    display: none;
-}
-
+/* SINGLE ARTICLE DISPLAY PAGE */
 #single-article {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
