@@ -1,53 +1,3 @@
-// array of article attributes
-const articleData = [
-    {
-        title: "Buffering Shapefiles in QGIS",
-        author: "NYU DataServices",
-        description: "A written guide on buffering shapefiles in open-source GIS software GIS.",
-        pdf: "\\pdf_docs\\Buffering Shapefiles in QGIS.pdf"
-    },
-    {
-        title: "Clipping Shapefiles in QGIS",
-        author: "NYU DataServices",
-        description: "A written guide on clipping shapefiles in open-source GIS software GIS.",
-        pdf: "\\pdf_docs\\Clipping Shapefiles in QGIS.pdf"
-    },
-    {
-        title: "Downloading OpenStreetMap data using QGIS",
-        author: "NYU DataServices",
-        description: "A written guide on how to download the OpenStreetMap basemap in open-source GIS software QGIS",
-        pdf: "\\pdf_docs\\Downloading OpenStreetMap data using QGIS.pdf"
-    },
-    {
-        title: "FM-1 An Introduction to Forest Management Plans",
-        author: "Rural Action",
-        description: "A short overview of what a forest management plan looks like through Rural Action Non-Profit's forestry department.",
-        pdf: "\\pdf_docs\\FM-1-An-Introduction-to-Forest-Management-Plans.pdf"
-    },
-    {
-        title: "Forest Farmers Handbook 2023.",
-        author: "Rural Action",
-        description: "Rural Action's complete Forest Farmer's Handbook, First Edition written in 2023.",
-        pdf: "\\pdf_docs\\Forest-Farmers-Handbook-2023-Final-1.pdf"
-    },
-    {
-        title: "How to Edit Attribute Tables in QGIS",
-        author: "NYU DataServices",
-        description: "A written guide on how to edit an attribute file in open-source GIS software QGIS.",
-        pdf: "\\pdf_docs\\How to Edit Attribute Tables in QGIS.pdf"
-    },
-    {
-        title: "Merging Shapefiles in QGIS",
-        author: "NYU DataServices",
-        description: "A written guide on how to merge shapefiles in open-source GIS software QGIS.",
-        pdf: "\\pdf_docs\\Merging Shapefiles in QGIS.pdf"
-    }
-];
-
-// FIND relevant ids in articles.html
-const gallery = document.getElementById('art-gallery');
-const single = document.getElementById('single-article');
-const results = document.getElementById('searched-gallery');
 switchPage('page-show-all', 'page-show-searched', 'page-show-single');
 
 // WHEN ON ALL ARTICLE LIST PAGE read array into 'art cards' to be displayed as article list
@@ -97,29 +47,55 @@ function articleSelected() {
 
 // SEARCH FUNCTION CODE
 function searchTitle() {
-    var input = document.getElementById('searchTitle');
-    filter = input.value.toUpperCase();
+    while (results.firstChild) {
+        results.removeChild(results.firstChild);
+        // console.log("here");
+    }
 
-    const temp = document.createElement("div");
+    var input = document.getElementById('searchTitle').value.toLowerCase();
     articleData.forEach((element) => {
-        console.log("here?");
-        if (element.title.toUpperCase().indexOf(filter) > -1) {
+        if (element.title.toLowerCase().indexOf(input)) {
             console.log("match");
             createArtCard(element, results);
         }
     });
 
-    // for (i = 0; i < articleData.length; i++) {
-    //     console.log("here");
-    //     a = temp[i].getElementsByTagName('a')[0];
-    //     txt = a.textContent;
-    //     if (txt.toUpperCase().indexOf(filter) <= -1) {
-    //         temp[i].removeChild();
-    //     }
-    // }
-    console.log(input.value);
     switchPage('page-show-searched', 'page-show-all', 'page-show-single');
 };
+
+function searchAuthor() {
+    while (results.firstChild) {
+        results.removeChild(results.firstChild);
+        // console.log("here");
+    }
+
+    var input = document.getElementById('searchAuthor').value.toLowerCase();
+    articleData.forEach((element) => {
+        if (element.author.toLowerCase().indexOf(input)) {
+            console.log("match");
+            createArtCard(element, results);
+        }
+    });
+
+    switchPage('page-show-searched', 'page-show-all', 'page-show-single');
+}
+
+function searchAll() {
+    while (results.firstChild) {
+        results.removeChild(results.firstChild);
+        // console.log("here");
+    }
+
+    var input = document.getElementById('searchAll').value.toLowerCase();
+    articleData.forEach((element) => {
+        if ((element.author.toLowerCase().indexOf(input) > -1) || (element.title.toLowerCase().indexOf(input) > -1) || (element.description.toLowerCase().indexOf(input) > -1)) {
+            console.log("match");
+            createArtCard(element, results);
+        }
+    });
+
+    switchPage('page-show-searched', 'page-show-all', 'page-show-single');
+}
 
 // REPLACE CSS section block\hide if needed
 function switchPage(shown, hidden, third) {
@@ -129,8 +105,12 @@ function switchPage(shown, hidden, third) {
     return false;
 }
 
-// goal = make article desc appear on hover. half pts to knut wtf is this problem.
 
+
+
+
+
+// dump code [old pieces of thigns] below please ignore
 /*
 const gal = document.getElementById('single-article');
 
@@ -163,4 +143,15 @@ function createArticle(x) {
 //     const result = articleData.find(({ title }) => title === event.target.id);
 //     createPage(result);
 // });
+
+
+
+    // for (i = 0; i < articleData.length; i++) {
+    //     console.log("here");
+    //     a = temp[i].getElementsByTagName('a')[0];
+    //     txt = a.textContent;
+    //     if (txt.toUpperCase().indexOf(filter) <= -1) {
+    //         temp[i].removeChild();
+    //     }
+    // }
 */

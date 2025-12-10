@@ -44,5 +44,5 @@ The Articles page lists a series of articles selected from a javascript list. Al
 
 ## To Do 
 Next:
-- Functional search bar
 - Your Files drop down
+- 

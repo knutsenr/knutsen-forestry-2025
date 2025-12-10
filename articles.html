@@ -3,7 +3,7 @@
 
 <head>
     <link rel="stylesheet" href="style.css">
-    <script scr="js/articleList.js"></script>
+    <script src="js/articles.js" defer></script>
     <script src="js/script.js" defer></script>
     <title>Forestry Foundation Articles</title>
 </head>
@@ -22,8 +22,10 @@
             <!-- search function does not currently do anything -->
             <search class="nav-item">
                 <!-- <form action="#" target="_self"> -->
-                <label for="all">Search by Title:</label>
-                <input id="searchTitle" type="text" list="titles" placeholder="Any Title">
+                <label for="all">Search All Criteria:</label>
+                <input type="text" id="searchAll" placeholder="Search. . .">
+                <!-- SEARCH TITLE -->
+                <!-- <input id="searchTitle" type="text" list="titles" placeholder="Any Title">
                 <datalist id="titles">
                     <option value="">Buffering Shapefiles in QGIS</option>
                     <option value="Clipping Shapefiles in QGIS"></option>
@@ -31,14 +33,13 @@
                     <option value="Forest Farmers Handbook 2023."></option>
                     <option value="Merging Shapefiles in QGIS"></option>
                     <option value="How to Edit Attribute Tables in QGIS"></option>
-                </datalist>
+                </datalist> -->
                 <!-- <label id="searchAuthor" for="author">Search by author:</label>
                     <input type="text" id="searchAuthor" placeholder="Author Name"> -->
-                <button value="Submit" id="submitButton" onclick="searchTitle()">Submit</button>
+                <button value="Submit" id="submitButton" onclick="searchAll()">Submit</button>
                 <!-- </form> -->
             </search>
         </nav>
-        <h1>Articles</h1>
     </header>
 
     <!-- //  // -->
@@ -46,54 +47,47 @@
         <!-- specific content to all articles page -->
         <p></p>
         <section id="page-show-all">
-            <h2>All Articles</h2>
+
+            <div class="show-all">
+
+                <h2>All Articles</h2>
+
+                <search id="advanced-search">
+                    <p>Advanced Search</p>
+                    <label for="all">Search by Title &nbsp;&nbsp;&nbsp;: </label>
+                    <!-- SEARCH TITLE -->
+                    <input id="searchTitle" type="text" list="titles" placeholder="Title. . . ">
+                    <datalist id="titles">
+                        <option value="">Buffering Shapefiles in QGIS</option>
+                        <option value="Clipping Shapefiles in QGIS"></option>
+                        <option value="FM-1 An Introduction to Forest Management Plans"></option>
+                        <option value="Forest Farmers Handbook 2023."></option>
+                        <option value="Merging Shapefiles in QGIS"></option>
+                        <option value="How to Edit Attribute Tables in QGIS"></option>
+                    </datalist>
+                    <button value="Submit" id="submitButton" onclick="searchTitle()">Submit</button>
+
+                    <br>
+
+                    <label id="searchAuthor" for="author">Search by Author:</label>
+                    <input type="text" id="searchAuthor" placeholder="Author. . . ">
+                    <button value="Submit" id="submitButton" onclick="searchAuthor()">Submit</button>
+                </search>
+            </div>
             <p></p>
             <div id="art-gallery"></div>
         </section>
 
         <section id="page-show-searched">
-            <p>pisser</p>
+            <h2 class="articles">Search Results</h2>
             <div id="searched-gallery"></div>
         </section>
 
         <section id="page-show-single">
-            <p></p>
             <!-- <object data="\pdf_docs\Clipping Shapefiles in QGIS.pdf#toolbar=0&navpanes=0" type="application/pdf"
                 scrolling="auto@" height="800px" width="100%"></object> -->
             <article id="single-article"></article>
         </section>
-
-        <!-- specific content to example article page avant -> javascript -->
-        <!-- <section>
-            <h1>Example Article Title</h1>
-            <h2>Author Lastname, Author2 Lastname2, Author3, Lastname3</h2>
-
-            <iframe data="/article_pdf/Buffering Shapefiles in QGIS.pdf" type="application/pdf" scrolling="auto@"
-                height="100%f" width="100%"></iframe>
-             <h3>Example Article Title</h3>
-                <h4>Authors! Long list of authors.</h4>
-
-                <p>How do classes work.</p>
-
-                <p>Help Help I'm Trapped In The Computer</p>
-                <p>No I'm not, but I am having a headache of a time getting the section stuff to work. I could just do
-                    these in different docs but now I'm determined to figure it out.</p>
-                <p>I figured it out!</p>
-                <p>Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia
-                    integer nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent per
-                    conubia nostra inceptos himenaeos.</p>
-
-                <p>Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque
-                    sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna
-                    tempor.
-                    Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia
-                    integer nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent per
-                    conubia nostra inceptos himenaeos.
-
-                </p> 
-        </section> -->
-
-
     </main>
 
     <!-- //  FOOTER  // -->
