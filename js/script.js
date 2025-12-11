@@ -1,6 +1,7 @@
 switchPage('page-show-all', 'page-show-searched', 'page-show-single');
+// REPLACE CSS section block\hide if needed
 
-// WHEN ON ALL ARTICLE LIST PAGE read array into 'art cards' to be displayed as article list
+// CREATE ARTICLE LIST
 articleData.forEach((element) => createArtCard(element, gallery));
 function createArtCard(entry, output) {
     const artDiv = document.createElement('div');
@@ -25,7 +26,7 @@ function createArtCard(entry, output) {
     output.appendChild(artDiv);
 };
 
-// WHEN ARTICLE IS SELECTED check for currently stored article, purge, create new article
+// SEARCH CODES
 function articleSelected() {
     while (single.firstChild) {
         single.removeChild(single.firstChild);
@@ -45,7 +46,7 @@ function articleSelected() {
     switchPage('page-show-single', 'page-show-all', 'page-show-searched');
 }
 
-// SEARCH FUNCTION CODE
+// Advanced Search
 function searchTitle() {
     while (results.firstChild) {
         results.removeChild(results.firstChild);
@@ -97,13 +98,6 @@ function searchAll() {
     switchPage('page-show-searched', 'page-show-all', 'page-show-single');
 }
 
-// REPLACE CSS section block\hide if needed
-function switchPage(shown, hidden, third) {
-    document.getElementById(shown).style.display = 'block';
-    document.getElementById(hidden).style.display = 'none';
-    document.getElementById(third).style.display = 'none';
-    return false;
-}
 
 
 

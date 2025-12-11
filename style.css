@@ -1,6 +1,6 @@
 /* BODY */
 body {
-    background-image: url("/pexels-shottrotter-1150745.jpg");
+    background-image: url("images/background.jpg");
     color: ivory;
     padding: 0% 5%;
     background-size: cover;
@@ -68,6 +68,10 @@ a:hover {
     background-color: seagreen;
 }
 
+#ad-search {
+    display: none;
+}
+
 /* sections only show article + example article pages when the requisite links are pressed. no i dont apparently understand how this is working but it _is_ working. . . */
 /* section:target::before {
     display: block;
@@ -92,12 +96,13 @@ section:target {
     height: 5%;
     text-align: center;
     row-gap: 10px;
-    grid-template-columns: 1fr 1fr 1fr 4fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr 4fr;
     top: 0;
     position: sticky;
 }
 
-.nav-item {
+.nav-item,
+.nav-item-vis {
     background-color: darkseagreen;
     border-radius: 2px 15px 2px;
     row-gap: 10%;
@@ -105,7 +110,6 @@ section:target {
     text-align: center;
     display: inline-block;
 }
-
 
 /* ARTICLE LIST CSS */
 .flex-container {
@@ -146,6 +150,41 @@ section:target {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     gap: 10px;
+}
+
+#visual-container {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+button.visual-element {
+    width: 20%;
+    background-color: seagreen;
+    color: white;
+    height: 50px;
+}
+
+#map-grid,
+#photo-grid {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.map-list {
+    padding: 10px;
+    background-color: #2e8b5780;
+    border-radius: 10px;
+    text-align: center;
+    width: 210px;
+}
+
+.photo-list {
+    padding: 10px;
+    background-color: #2e8b5780;
+    border-radius: 10px;
+    text-align: center;
 }
 
 #searched-gallery {

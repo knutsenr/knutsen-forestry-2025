@@ -6,6 +6,9 @@ Github container for my project in the 2025 introduction to web development for 
 - **Added |** Added search function
   - Titles will fill in as autocorrect based on user input
   - Searching by title will limit only applicable articles
+  - Added Photography and Maps pages and relevant images + code
+  - Photography and Maps now display their images in grid produced through js 
+  - Partially constructed advanced search
 - **Modified |** 
   - Changed the new article select code from addEventListener to an onclick in the <a> attr. This is cleaner, stops it from running and throwing error each time one clicks anywhere and not just on the link. 
   - articles.html no longer uses section:target hide/block since there are now 3 sections. Instead, what is shown is controlled by switchPage() in script.js
@@ -36,7 +39,8 @@ Github container for my project in the 2025 introduction to web development for 
 
 **style.css** contains all css for project.
 
-**script.js** contians all javascript for project. articleList.js is currently not interacting with the program so the article array is also housed in script.js.
+**articles.js** contains variable declarations and data arrays.
+**script.js** contians all functions. 
 
 ### Navigation
 From Home one can use the Articles selector at the top of the page OR the Articles button under the Resources section.

@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../style.css">
     <title>Forestry Foundations Home</title>
 </head>
 
@@ -17,18 +17,34 @@
             <!-- Link to file w/ articles and example article pages. Specifically to the #articles section, not showing the examples -->
             <a class="nav-item" href="articles.html#all-articles">Articles</a>
             <!-- Will open files and save dropdown, currently does nothing -->
-            <a class="nav-item" href="nowhere">Your Files
+            <!-- <a class="nav-item" href="nowhere">Your Files
                 <select name="Your Files" id="yourFiles">
                     <option value="allFiles">All Files</option>
                 </select>
-            </a>
+            </a> -->
+            <!-- maps -->
+            <a class="nav-item" href="visualContent.html#maps">Photographs</a>
+            <!-- photos -->
+            <a class="nav-item" href="visualContent.html#maps">Maps</a>
             <!-- search function does not currently do anything -->
             <search class="nav-item">
-                <form action="./search/">
-                    <label for="all">Search a keyword:</label>
-                    <input id="search" type="search" placeholder="Start Typing Here">
-                    <button>Search</button>
-                </form>
+                <!-- <form action="#" target="_self"> -->
+                <label for="all">Search All Criteria:</label>
+                <input type="text" id="searchAll" placeholder="Search. . .">
+                <!-- SEARCH TITLE -->
+                <!-- <input id="searchTitle" type="text" list="titles" placeholder="Any Title">
+                <datalist id="titles">
+                    <option value="">Buffering Shapefiles in QGIS</option>
+                    <option value="Clipping Shapefiles in QGIS"></option>
+                    <option value="FM-1 An Introduction to Forest Management Plans"></option>
+                    <option value="Forest Farmers Handbook 2023."></option>
+                    <option value="Merging Shapefiles in QGIS"></option>
+                    <option value="How to Edit Attribute Tables in QGIS"></option>
+                </datalist> -->
+                <!-- <label id="searchAuthor" for="author">Search by author:</label>
+                    <input type="text" id="searchAuthor" placeholder="Author Name"> -->
+                <button value="Submit" id="submitButton" onclick="searchAll()">Submit</button>
+                <!-- </form> -->
             </search>
         </nav>
         <h1>Forestry Foundations</h1>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="../style.css">
+    <script src="../js/articles.js" defer></script>
+    <script src="../js/visualContent.js" defer></script>
+    <title>Forestry Foundation Articles</title>
+</head>
+
+<body>
+    <!-- //  INTRO  // -->
+    <header class="index-header">
+        <!-- navigation bar -->
+        <nav class="nav-header">
+            <!-- Link to Home page index.html -->
+            <a class="nav-item" href="index.html">𖣂 Home</a>
+            <!-- Link to file w/ articles and example article pages. Specifically to the #articles section, not showing the examples -->
+            <a class="nav-item" href="articles.html">Articles</a>
+            <!-- maps -->
+            <a class="nav-item-vis" id="button" href="visualContent.html">Photography</a>
+            <!-- photos -->
+            <a class="nav-item-vis" id="button-map" href="visualContent.html">Maps</a>
+            <!-- search all -->
+            <search class="nav-item">
+                <!-- <form action="#" target="_self"> -->
+                <label for="all">Search All Criteria:</label>
+                <input type="text" id="searchAll" placeholder="Search. . .">
+                <button value="Submit" id="submitButton" onclick="searchAll()">Submit</button>
+                <!-- </form> -->
+            </search>
+        </nav>
+        <p></p>
+        <p></p>
+        <div id="visual-container">
+            <h1 class="visual-element">Show:</h1>
+            <button class="visual-element" onclick="switchPage('show-photo-grid', 'show-map-grid')"> Only Photographs
+            </button>
+            <button class="visual-element" onclick="switchPage('show-map-grid', 'show-photo-grid')">Show Only
+                Maps</button>
+            <button class="visual-element" onclick="switchPage('show-map-grid', 'show-photo-grid')">All</button>
+        </div>
+    </header>
+
+    <!-- //  // -->
+    <main>
+        <!-- specific content to all articles page -->
+        <p></p>
+        <section id="show-photo-grid">
+            <div class="show-all">
+                <h2>All Phogographs</h2>
+            </div>
+            <p></p>
+            <div id="photo-grid"></div>
+        </section>
+
+        <section id="show-map-grid">
+            <div class="show-all">
+                <h2>All Maps</h2>
+            </div>
+            <p></p>
+            <div id="map-grid"></div>
+        </section>
+
+        <section id="show-selected-image">
+            <!-- <object data="\pdf_docs\Clipping Shapefiles in QGIS.pdf#toolbar=0&navpanes=0" type="application/pdf"
+                scrolling="auto@" height="800px" width="100%"></object> -->
+            <article id="selected-image"></article>
+        </section>
+    </main>
+
+    <!-- //  FOOTER  // -->
+    <footer>
+        <p>
+        </p>
+        <!-- Name + Email -->
+        <p class="footer">© 2025 by Rowan Knutsen | <a href="mailto:knutsenrowan@gmail.com">knutsenrowan@gmail.com</a> |
+            <a href="mailto:rak9808@nyu.edu">rak9808@nyu.edu</a>
+        </p>
+    </footer>
+</body>
+
+</html>
