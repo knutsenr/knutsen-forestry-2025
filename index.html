@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="../style.css">
+    <title>Forestry Foundations Home</title>
+</head>
+
+<body>
+    <!-- //  HEADER  // -->
+    <header class="index-header">
+        <!-- Navigation Bar -->
+        <nav class="nav-header">
+            <!-- Link to Home page index.html -->
+            <a class="nav-item" href="index.html">𖣂 Home</a>
+            <!-- Link to file w/ articles and example article pages. Specifically to the #articles section, not showing the examples -->
+            <a class="nav-item" href="/html/articles.html">Articles</a>
+            <!-- Will open files and save dropdown, currently does nothing -->
+            <a class="nav-item" href="/html/visualContent.html#maps">Images</a>
+            <!-- photos -->
+            <a class="nav-item" href="#">Advanced Search</a>
+            <!-- search function does not currently do anything -->
+            <search class="nav-item">
+                <!-- <form action="#" target="_self"> -->
+                <label for="all">Search All Criteria:</label>
+                <input type="text" id="searchAll" placeholder="Search. . .">
+                <!-- SEARCH TITLE -->
+                <!-- <input id="searchTitle" type="text" list="titles" placeholder="Any Title">
+                <datalist id="titles">
+                    <option value="">Buffering Shapefiles in QGIS</option>
+                    <option value="Clipping Shapefiles in QGIS"></option>
+                    <option value="FM-1 An Introduction to Forest Management Plans"></option>
+                    <option value="Forest Farmers Handbook 2023."></option>
+                    <option value="Merging Shapefiles in QGIS"></option>
+                    <option value="How to Edit Attribute Tables in QGIS"></option>
+                </datalist> -->
+                <!-- <label id="searchAuthor" for="author">Search by author:</label>
+                    <input type="text" id="searchAuthor" placeholder="Author Name"> -->
+                <button value="Submit" id="submitButton" onclick="searchAll()">Submit</button>
+                <!-- </form> -->
+            </search>
+        </nav>
+        <h1>Forestry Foundations</h1>
+        <h2>Home Page</h2>
+    </header>
+
+    <!-- //  // -->
+    <main>
+        <p></p>
+        <p></p>
+
+        <div class="description">
+            <h2>Welcome to Forestry Foundations</h2>
+            <p>The goal of this website is to provide resources for local landowners, residents of Apalachia, and
+                interested parties easier access to relevant material relating to forestry, land use, and local history.
+                Currently the site contains:</p>
+            <ul>
+                <li>A collection of relevant articles.</li>
+                <li>Maps and Photography which can be viewed seperately or together.</li>
+            </ul>
+            <p>In the future we hope to provide contact with relevant subject matter experts and other features. Thank
+                you for visiting!</p>
+        </div>
+        <p></p>
+        <p></p>
+
+        <!--     Grid of links formed in a flex box -->
+        <div class="flex-container">
+            <h2 class="flex-item-1">Resources</h2>
+            <div class="flex-item">
+                <img src="https://picsum.photos/id/367/150/80?grayscale" alt="articles image">
+                <p><a href="articles.html#all-articles">
+                        Articles
+                    </a></p>
+            </div>
+            <div class="flex-item">
+                <img src="https://picsum.photos/id/802/150/80?grayscale" alt="maps image">
+                <p><a href="visualContent.html">
+                        Maps & Photography
+                    </a></p>
+            </div>
+            <div class="flex-item">
+                <img src="https://picsum.photos/id/99/150/80?grayscale" alt="phtography image">
+                <p><a href="visualContent.html">
+                        Maps & Photography
+                    </a></p>
+            </div>
+            <div class="flex-item">
+                <h2>Contact a Subject Matter Expert</h2>
+            </div>
+        </div>
+        <p></p>
+    </main>
+
+    <!-- //  FOOTER  // -->
+    <footer>
+        <!-- Name + Email -->
+        <p class="footer">© 2025 by Rowan Knutsen | <a href="mailto:knutsenrowan@gmail.com">knutsenrowan@gmail.com</a> |
+            <a href="mailto:rak9808@nyu.edu">rak9808@nyu.edu</a>
+        </p>
+    </footer>
+</body>
+
+</html>
