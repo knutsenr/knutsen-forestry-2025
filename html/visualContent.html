@@ -17,16 +17,28 @@
             <a class="nav-item" href="index.html">𖣂 Home</a>
             <!-- Link to file w/ articles and example article pages. Specifically to the #articles section, not showing the examples -->
             <a class="nav-item" href="articles.html">Articles</a>
-            <!-- maps -->
-            <a class="nav-item-vis" id="button" href="visualContent.html">Photography</a>
+            <!-- Will open files and save dropdown, currently does nothing -->
+            <a class="nav-item" href="visualContent.html">Images</a>
             <!-- photos -->
-            <a class="nav-item-vis" id="button-map" href="visualContent.html">Maps</a>
-            <!-- search all -->
+            <a class="nav-item" href="#">Advanced Search</a>
+            <!-- search function does not currently do anything -->
             <search class="nav-item">
                 <!-- <form action="#" target="_self"> -->
                 <label for="all">Search All Criteria:</label>
-                <input type="text" id="searchAll" placeholder="Search. . .">
-                <button value="Submit" id="submitButton" onclick="searchAll()">Submit</button>
+                <input type="text" id="search-images" placeholder="Search. . .">
+                <!-- SEARCH TITLE -->
+                <!-- <input id="searchTitle" type="text" list="titles" placeholder="Any Title">
+                <datalist id="titles">
+                    <option value="">Buffering Shapefiles in QGIS</option>
+                    <option value="Clipping Shapefiles in QGIS"></option>
+                    <option value="FM-1 An Introduction to Forest Management Plans"></option>
+                    <option value="Forest Farmers Handbook 2023."></option>
+                    <option value="Merging Shapefiles in QGIS"></option>
+                    <option value="How to Edit Attribute Tables in QGIS"></option>
+                </datalist> -->
+                <!-- <label id="searchAuthor" for="author">Search by author:</label>
+                    <input type="text" id="searchAuthor" placeholder="Author Name"> -->
+                <button value="Submit" id="submitButton" onclick="searchPhotos()">Submit</button>
                 <!-- </form> -->
             </search>
         </nav>
@@ -38,7 +50,8 @@
             </button>
             <button class="visual-element" onclick="switchPage('show-map-grid', 'show-photo-grid')">Show Only
                 Maps</button>
-            <button class="visual-element" onclick="switchPage('show-map-grid', 'show-photo-grid')">All</button>
+            <button class="visual-element"
+                onclick="displayBlock('show-map-grid'), displayBlock('show-photo-grid')">All</button>
         </div>
     </header>
 
@@ -62,10 +75,10 @@
             <div id="map-grid"></div>
         </section>
 
-        <section id="show-selected-image">
+        <section id="show-image-grid">
             <!-- <object data="\pdf_docs\Clipping Shapefiles in QGIS.pdf#toolbar=0&navpanes=0" type="application/pdf"
                 scrolling="auto@" height="800px" width="100%"></object> -->
-            <article id="selected-image"></article>
+            <article id="image-results"></article>
         </section>
     </main>
 

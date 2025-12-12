@@ -200,6 +200,7 @@ const results = document.getElementById('searched-gallery');
 // VISUALCONTENT PAGE VARIABLES
 const mapGrid = document.getElementById('map-grid');
 const photoGrid = document.getElementById('photo-grid');
+const imageGrid = document.getElementById('image-results');
 
 // // VISUALCONTENT PAGE VARIABLES
 // const mapGrid = document.getElementById('map-grid');
@@ -220,4 +221,21 @@ function displayBlock(page) {
 
 function displayNone(page) {
     if (document.getElementById(page).style.display == "block") { document.getElementById(page).style.display = 'none'; }
+}
+
+function searchArticles() {
+    while (results.firstChild) {
+        results.removeChild(results.firstChild);
+        // console.log("here");
+    }
+
+    var input = document.getElementById('search-all').value.toLowerCase();
+    articleData.forEach((element) => {
+        if ((element.author.toLowerCase().indexOf(input) > -1) || (element.title.toLowerCase().indexOf(input) > -1) || (element.description.toLowerCase().indexOf(input) > -1)) {
+            console.log("match");
+            createArtCard(element, results);
+        }
+    });
+
+    switchPage('page-show-searched', 'page-show-all', 'page-show-single');
 }

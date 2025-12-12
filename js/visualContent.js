@@ -39,3 +39,26 @@ function createVisCard(entry, output, type) {
 
     output.appendChild(mapDiv);
 };
+
+
+function searchPhotos() {
+    while (imageGrid.firstChild) {
+        imageGrid.removeChild(imageGrid.firstChild);
+    }
+    p = false;
+    m = false;
+
+    var photo = document.getElementById('search-images').value.toLowerCase();
+    photoData.forEach((element) => {
+        if ((element.location.toLowerCase().indexOf(photo) > -1) || (element.year.toLowerCase().indexOf(photo) > -1) || (element.style.toLowerCase().indexOf(photo) > -1) || (element.link.toLowerCase().indexOf(photo) > -1)) {
+            console.log("photo found");
+            p = true;
+            createVisCard(element, imageGrid, 'photo');
+        }
+    });
+
+    displayBlock('show-imgage-grid');
+    displayNone('show-map-grid');
+    displayNone('show-photo-grid');
+}
+

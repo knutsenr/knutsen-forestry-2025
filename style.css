@@ -57,6 +57,12 @@ a {
     border-radius: 3px 10px 3px;
 }
 
+.flex-container a {
+    background-color: #ffffff00;
+    font-size: xx-large;
+    line-height: 0.5;
+}
+
 /* links when hover */
 a:hover {
     color: rgb(0, 51, 0);
@@ -64,8 +70,13 @@ a:hover {
     color: ivory;
 }
 
-#submitButton {
+button {
     background-color: seagreen;
+}
+
+button:hover {
+    background-color: darkseagreen;
+    color: black;
 }
 
 #ad-search {

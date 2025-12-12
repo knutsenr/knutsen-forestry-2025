@@ -81,22 +81,6 @@ function searchAuthor() {
     switchPage('page-show-searched', 'page-show-all', 'page-show-single');
 }
 
-function searchAll() {
-    while (results.firstChild) {
-        results.removeChild(results.firstChild);
-        // console.log("here");
-    }
-
-    var input = document.getElementById('searchAll').value.toLowerCase();
-    articleData.forEach((element) => {
-        if ((element.author.toLowerCase().indexOf(input) > -1) || (element.title.toLowerCase().indexOf(input) > -1) || (element.description.toLowerCase().indexOf(input) > -1)) {
-            console.log("match");
-            createArtCard(element, results);
-        }
-    });
-
-    switchPage('page-show-searched', 'page-show-all', 'page-show-single');
-}
 
 
 

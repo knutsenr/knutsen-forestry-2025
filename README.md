@@ -9,6 +9,7 @@ Github container for my project in the 2025 introduction to web development for 
   - Added Photography and Maps pages and relevant images + code
   - Photography and Maps now display their images in grid produced through js 
   - Partially constructed advanced search
+- **Note  |** The search currently only works for articles. My attempts to make more complex search critera have failed. 
 - **Modified |** 
   - Changed the new article select code from addEventListener to an onclick in the <a> attr. This is cleaner, stops it from running and throwing error each time one clicks anywhere and not just on the link. 
   - articles.html no longer uses section:target hide/block since there are now 3 sections. Instead, what is shown is controlled by switchPage() in script.js
